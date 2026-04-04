@@ -1,0 +1,27 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    OBP Double Helix Logo
+    Two complementary strands: being↔resource (A-T) / flow↔context (G-C)
+    One full twist, 5 rungs.
+  -->
+
+  <!-- Strand B (rear, slightly dimmer) -->
+  <path d="M110 40 C110 120 290 120 290 200 C290 280 110 280 110 360"
+        stroke="#A0A0E8" stroke-width="13" stroke-linecap="round" fill="none"/>
+
+  <!-- Strand A (front, brighter) -->
+  <path d="M290 40 C290 120 110 120 110 200 C110 280 290 280 290 360"
+        stroke="#D0D0FF" stroke-width="13" stroke-linecap="round" fill="none"/>
+
+  <!-- Rungs — connecting the two strands at key intervals -->
+  <!-- Top -->
+  <line x1="110" y1="40"  x2="290" y2="40"  stroke="#8888CC" stroke-width="9" stroke-linecap="round"/>
+  <!-- Upper quarter -->
+  <line x1="126" y1="83"  x2="274" y2="83"  stroke="#8888CC" stroke-width="7" stroke-linecap="round"/>
+  <!-- Middle (strands fully crossed) -->
+  <line x1="110" y1="200" x2="290" y2="200" stroke="#8888CC" stroke-width="9" stroke-linecap="round"/>
+  <!-- Lower quarter -->
+  <line x1="126" y1="317" x2="274" y2="317" stroke="#8888CC" stroke-width="7" stroke-linecap="round"/>
+  <!-- Bottom -->
+  <line x1="110" y1="360" x2="290" y2="360" stroke="#8888CC" stroke-width="9" stroke-linecap="round"/>
+</svg>

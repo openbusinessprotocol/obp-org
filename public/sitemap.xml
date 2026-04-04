@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://openbusinessprotocol.org/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Open Business Protocol</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-03-20</news:publication_date>
+      <news:title>OBP v1.0: The Grammar of Business as a Living System</news:title>
+    </news:news>
+  </url>
+</urlset>

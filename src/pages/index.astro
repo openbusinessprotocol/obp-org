@@ -1,0 +1,869 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Open Business Protocol"
+  description="An open protocol for describing, organizing, and evolving any business system."
+>
+
+  <!-- ─── Fixed background helix (viewport-height, no scroll) ── -->
+  <div class="fixed inset-0 flex items-center justify-center pointer-events-none" style="z-index: 0; opacity: 0.045;" aria-hidden="true">
+    <svg style="height: 100vh; width: auto;" viewBox="0 0 400 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Strand B (rear) -->
+      <path d="M110 0 C110 135 290 135 290 270 C290 405 110 405 110 540"
+            stroke="#6868C0" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <!-- Strand A (front) -->
+      <path d="M290 0 C290 135 110 135 110 270 C110 405 290 405 290 540"
+            stroke="#9494E8" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <!-- Rungs -->
+      <line x1="110" y1="0"   x2="290" y2="0"   stroke="#7070C8" stroke-width="10" stroke-linecap="round"/>
+      <line x1="126" y1="90"  x2="274" y2="90"  stroke="#7070C8" stroke-width="8"  stroke-linecap="round"/>
+      <line x1="110" y1="270" x2="290" y2="270" stroke="#7070C8" stroke-width="10" stroke-linecap="round"/>
+      <line x1="126" y1="450" x2="274" y2="450" stroke="#7070C8" stroke-width="8"  stroke-linecap="round"/>
+      <line x1="110" y1="540" x2="290" y2="540" stroke="#7070C8" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ─── [0] HERO ────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden" style="z-index: 1;">
+
+    <!-- Ambient glow -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+           style="background: radial-gradient(circle, rgba(96,96,192,0.06) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto text-center">
+
+      <!-- Title -->
+      <h1 class="font-serif text-5xl md:text-7xl font-normal text-silver-100 leading-tight mb-8 tracking-tight">
+        Open Business Protocol
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="font-sans text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-6" style="letter-spacing: 0.01em; color: #8888A8;">
+        An open protocol for describing, organizing,<br class="hidden md:block" />
+        and evolving any business system.
+      </p>
+
+      <!-- Audience -->
+      <p class="font-sans text-sm leading-relaxed max-w-xl mx-auto mb-16" style="letter-spacing: 0.06em; color: #55557A;">
+        For human operators and AI agents.
+      </p>
+
+      <!-- Date stamp -->
+      <p class="text-silver-600 text-xs tracking-[0.25em] font-sans">
+        First Published:&ensp;2026-04-01
+      </p>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2" aria-hidden="true">
+      <div class="w-px h-16 mx-auto"
+           style="background: linear-gradient(to bottom, rgba(96,96,112,0.5), transparent);"></div>
+    </div>
+  </section>
+
+
+  <!-- ─── [1] THE QUESTION ─────────────────────────────────────── -->
+  <section class="py-32 px-6" style="position: relative; z-index: 1; background-color: rgba(8,8,16,0.92);">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-silver-600 text-xs tracking-[0.3em] uppercase mb-12 font-sans">I.</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-normal text-silver-100 leading-snug mb-10">
+        Why does business appear complex?
+      </h2>
+      <div class="space-y-6 text-silver-500 leading-[1.9] font-sans font-light text-base md:text-lg">
+        <p>
+          The apparent complexity of modern business is not inherent to business itself.
+          It is an artifact of fragmentation — of systems that cannot speak to one another,
+          each defining "customer," "task," or "value" according to its own private vocabulary.
+        </p>
+        <p>
+          What is missing is not more software. It is not a better API.
+          What is missing is a grammar — a shared structure prior to any implementation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── [2] FOUR BASES ───────────────────────────────────────── -->
+  <section class="py-32 px-6" style="border-top: 1px solid rgba(96,96,112,0.15); position: relative; z-index: 1; background-color: rgba(8,8,16,0.35);">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-silver-600 text-xs tracking-[0.3em] uppercase mb-12 font-sans">II.</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-normal text-silver-100 leading-snug mb-16">
+        Four bases.<br class="hidden md:block" /> Everything else is a sequence.
+      </h2>
+
+      <!-- Four bases grid -->
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+
+        <!-- being -->
+        <div>
+          <div class="flex items-baseline gap-4 mb-2">
+            <span class="font-serif text-xl text-violet-400 font-normal">being</span>
+            <span class="text-silver-600 text-xs tracking-widest font-sans">— A —</span>
+          </div>
+          <p class="text-silver-600 font-sans font-light text-sm">The Subject. Will.</p>
+        </div>
+
+        <!-- resource -->
+        <div>
+          <div class="flex items-baseline gap-4 mb-2">
+            <span class="font-serif text-xl text-violet-400 font-normal">resource</span>
+            <span class="text-silver-600 text-xs tracking-widest font-sans">— T —</span>
+          </div>
+          <p class="text-silver-600 font-sans font-light text-sm">The Object. Matter.</p>
+        </div>
+
+        <!-- flow -->
+        <div>
+          <div class="flex items-baseline gap-4 mb-2">
+            <span class="font-serif text-xl text-violet-400 font-normal">flow</span>
+            <span class="text-silver-600 text-xs tracking-widest font-sans">— G —</span>
+          </div>
+          <p class="text-silver-600 font-sans font-light text-sm">The Process. Time.</p>
+        </div>
+
+        <!-- context -->
+        <div>
+          <div class="flex items-baseline gap-4 mb-2">
+            <span class="font-serif text-xl text-violet-400 font-normal">context</span>
+            <span class="text-silver-600 text-xs tracking-widest font-sans">— C —</span>
+          </div>
+          <p class="text-silver-600 font-sans font-light text-sm">The Frame. Why and where.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── [3] THE PROTOCOL ─────────────────────────────────────── -->
+  <section class="py-32 px-6" style="border-top: 1px solid rgba(96,96,112,0.15); position: relative; z-index: 1; background-color: rgba(8,8,16,0.78);">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-silver-600 text-xs tracking-[0.3em] uppercase mb-12 font-sans">III.</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-normal text-silver-100 leading-snug mb-10">
+        A protocol, not a product.
+      </h2>
+      <div class="space-y-6 text-silver-500 leading-[1.9] font-sans font-light text-base md:text-lg">
+        <p>
+          ISO does not design products. It defines the conditions under which products
+          can be manufactured and exchanged with confidence across institutional boundaries.
+          OBP occupies an analogous position for business operations.
+        </p>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-3 gap-10">
+        <div>
+          <p class="font-serif text-silver-200 text-base mb-3 font-normal">Universal</p>
+          <p class="text-silver-600 text-sm leading-[1.85] font-sans font-light">
+            The grammar does not assume an industry, a technology, or an era.
+            A trading house in 1850 and a network of autonomous agents in 2050
+            are both fully describable within the same four primitives —
+            at different resolutions, but without loss of coherence.
+          </p>
+        </div>
+        <div>
+          <p class="font-serif text-silver-200 text-base mb-3 font-normal">Generative</p>
+          <p class="text-silver-600 text-sm leading-[1.85] font-sans font-light">
+            The protocol is a grammar, not a list. Any business activity, in any industry,
+            at any scale, can be derived from its primitives.
+          </p>
+        </div>
+        <div>
+          <p class="font-serif text-silver-200 text-base mb-3 font-normal">Implementation-agnostic</p>
+          <p class="text-silver-600 text-sm leading-[1.85] font-sans font-light">
+            An OBP-conformant description does not encode the assumptions of any platform.
+            A reference implementation exists as proof of feasibility,
+            not as a constraint on conformance.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ─── [4] WHITEPAPER ───────────────────────────────────────── -->
+  <section id="whitepaper" class="py-32 px-6" style="border-top: 1px solid rgba(96,96,112,0.15); position: relative; z-index: 1; background-color: rgba(8,8,16,0.92);">
+    <div class="max-w-2xl mx-auto">
+
+      <p class="text-silver-600 text-xs tracking-[0.3em] uppercase mb-12 font-sans">IV. &ensp;Whitepaper</p>
+
+      <!-- Paper title -->
+      <h2 class="font-serif text-2xl md:text-3xl font-normal text-silver-100 leading-snug mb-4">
+        OBP v1.0: The Grammar of Business as a Living System
+      </h2>
+      <p class="text-silver-600 text-sm font-sans mb-16">
+        Open Business Protocol — 2026-04-01
+      </p>
+
+      <!-- Paper body -->
+      <div class="prose-obp space-y-10 text-silver-500 leading-[1.95] font-sans font-light text-sm md:text-base">
+
+        <!-- Abstract -->
+        <div>
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-4 not-italic">Abstract</h3>
+          <p>
+            Open Business Protocol (OBP) is a universal protocol for describing business domains
+            through four irreducible primitives: <em class="font-serif text-silver-400 not-italic">being</em>,
+            <em class="font-serif text-silver-400 not-italic">resource</em>,
+            <em class="font-serif text-silver-400 not-italic">flow</em>, and
+            <em class="font-serif text-silver-400 not-italic">context</em>.
+            Implementation-agnostic by design, OBP establishes a shared grammar through which
+            any business system — human or machine, small enterprise or large organization —
+            can be coherently described, organized, and evolved.
+            This document presents OBP v1.0: its philosophical foundations,
+            structural principles, and implications for the age of intelligent agents.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            Introduction: The Problem of Complexity
+          </h3>
+          <p class="mb-5">
+            Why does business appear complex? When we examine the operational architecture of any
+            organization, we encounter layers of specialized software, proprietary data structures,
+            and siloed workflows. Each tool speaks its own dialect. Each platform defines "customer,"
+            "invoice," or "task" according to its own schema. The apparent complexity of modern business
+            is not inherent to business itself — it is an artifact of fragmentation.<sup><a href="#ref-1" id="cite-1" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[1]</a></sup>
+          </p>
+          <p class="mb-5">
+            But the problem is not new. Organized human activity has always generated coordination
+            challenges that exceed the capacity of any individual to manage alone. Every era produced
+            ambitious responses: Pacioli's formalization of double-entry bookkeeping in 1494 gave
+            merchants a shared grammar for recording value across time and counterparty;<sup><a href="#ref-6" id="cite-6" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[6]</a></sup>
+            scientific management at the turn of the twentieth century attempted to reduce human labor
+            to transferable flows;<sup><a href="#ref-7" id="cite-7" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[7]</a></sup>
+            enterprise resource planning systems encoded entire organizational logics into software
+            that could be administered at scale. Each was a genuine achievement.
+            Each resolved a portion of the problem. And each was overtaken, in time, by the complexity
+            it could not anticipate — as the confident enterprises of 1928 discovered when the
+            foundations gave way beneath them.
+          </p>
+          <p class="mb-5">
+            AI agents are not the origin of the current crisis. They are its latest accelerant.<sup><a href="#ref-3" id="cite-3" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[3]</a></sup>
+            The proliferation of autonomous systems — each capable of acting, deciding, and transacting
+            on behalf of the organizations that deploy them — has compressed the timescale in which
+            fragmentation becomes critical. What once took decades to calcify now hardens in months.
+            The same incoherence that once frustrated human operators now misdirects autonomous
+            processes at machine speed.
+          </p>
+          <p class="mb-5">
+            Existing frameworks have addressed symptoms rather than roots. Low-code platforms offered
+            visual abstractions that masked underlying incoherence. AI agents have introduced new
+            capabilities without resolving the fundamental problem: there is no shared language for
+            describing what a business is or does.
+          </p>
+          <p>
+            This is not merely a technical problem. It is a linguistic one.
+            OBP proposes a solution at the level of grammar itself.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            The Four Bases
+          </h3>
+          <p class="mb-5">
+            Every grammar rests on a finite set of irreducible elements. OBP proposes four.
+          </p>
+
+          <p class="mb-3">
+            <em class="font-serif text-silver-300 not-italic">being — The Subject (Will).</em>
+            &ensp;Being denotes any entity capable of intention — human, artificial, or organizational.
+            A being is not defined by its substrate but by its capacity for directed action.
+            It can configure its environment, coordinate with other beings, and reflect on its own behavior.
+            Being is the locus of sovereignty: the origin point from which all meaningful action flows.
+          </p>
+
+          <p class="mb-3">
+            <em class="font-serif text-silver-300 not-italic">resource — The Object (Matter).</em>
+            &ensp;Resource denotes anything that a being can own, transform, consume, or create —
+            money, data, intellectual property, physical goods, relational capital.
+            A resource without a being to ascribe meaning to it is merely raw matter.
+            The relationship between being and resource constitutes the primary axis of ownership
+            and value creation.
+          </p>
+
+          <p class="mb-3">
+            <em class="font-serif text-silver-300 not-italic">flow — The Process (Time).</em>
+            &ensp;Flow denotes the structured description of change over time.
+            A flow is not merely a sequence of actions; it is the encoding of how a being operates
+            on resources within a given context. Flow is always contextually bound: the same sequence
+            of operations produces entirely different outcomes depending on the frame within which
+            it is executed.
+          </p>
+
+          <p class="mb-8">
+            <em class="font-serif text-silver-300 not-italic">context — The Frame (Why/Where).</em>
+            &ensp;Context denotes the conditions of meaning — the market, the regulatory environment,
+            the organizational purpose, the emotional state of participants. Context is not background
+            noise; it is the interpretive frame that gives flow its direction and resource its value.
+            Without context, flow becomes purposeless motion.
+          </p>
+
+          <p class="mb-5">
+            These four are not arbitrary. They emerge from a structural analysis of what any
+            intelligible account of business activity must include. Remove any one and the description
+            collapses: without being, there is no agent; without resource, no subject matter;
+            without flow, no change; without context, no meaning.
+          </p>
+
+          <p class="mb-5">
+            The relationship between these bases is not merely additive. They form two complementary pairs,
+            each exhibiting a distinct coupling character.
+          </p>
+
+          <p class="mb-3">
+            Being and resource constitute a <em class="font-serif text-silver-400 not-italic">fluid pair</em>
+            (analogous to the adenine-thymine base pair in DNA).
+            A being freely acquires, transforms, and releases resources.
+            The coupling is dynamic: ownership changes, value transforms, relationships evolve.
+          </p>
+
+          <p class="mb-8">
+            Flow and context constitute a <em class="font-serif text-silver-400 not-italic">structural pair</em>
+            (analogous to guanine-cytosine).
+            A flow cannot be understood independently of its context. The same process executed
+            in different markets, under different regulations, or within different organizational cultures
+            produces fundamentally different outcomes. This coupling is strong: it is not possible to
+            fully specify a flow without specifying the context in which it operates.
+          </p>
+
+          <p>
+            The structural analogy to DNA is intentional but bounded.
+            We invoke it not to reduce business to biology, but to suggest that just as biological life
+            is encoded through a small number of base pairs capable of infinite combination,
+            business activity may be fully described through a small number of conceptual primitives
+            capable of generating the entire observable complexity of organizational life.<sup><a href="#ref-4" id="cite-4" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[4]</a><a href="#ref-5" id="cite-5" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[5]</a></sup>
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            The Protocol as a Universal Grammar
+          </h3>
+          <p class="mb-5">
+            The International Organization for Standardization does not design products.
+            It defines the conditions under which products can be designed, manufactured,
+            and exchanged with confidence across institutional and cultural boundaries.
+            ISO 9001 does not specify what a company should make; it specifies how quality
+            management processes should be structured so that the output is consistently reliable.
+          </p>
+          <p class="mb-5">
+            OBP occupies an analogous position in the domain of business operations.
+            It does not specify what a business should do, what tools it should use,
+            or what markets it should enter. It specifies the grammatical structure through which
+            any business activity can be coherently described.<sup><a href="#ref-2" id="cite-2" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[2]</a></sup>
+          </p>
+          <p class="mb-5">
+            This property — implementation independence — is not a limitation but a design principle.
+            An OBP-conformant description of a sales process should be interpretable by any system
+            that implements the protocol, regardless of whether that system runs on cloud infrastructure
+            or local hardware, whether its agents are human or artificial,
+            whether its storage is relational or document-based.
+          </p>
+          <p class="mb-8">
+            We call systems that implement OBP <em class="font-serif text-silver-400 not-italic">World Filters</em>.
+            Each World Filter translates the universal grammar of OBP into the specific vocabulary
+            of its domain. A World Filter for a logistics company will instantiate OBP's primitives
+            differently from one designed for a creative agency or a public sector institution.
+            But because both are grounded in the same protocol, their descriptions remain mutually
+            intelligible at the level of grammar.
+          </p>
+          <p class="mb-5">
+            This is the function of any genuine protocol: not to prescribe but to enable.
+            TCP/IP does not specify what information should be transmitted; it specifies how transmission
+            should occur such that any compliant system can participate.
+            OBP does not specify what a business should be; it specifies the structure within which
+            any business can describe itself coherently.
+          </p>
+          <p class="mb-2">Three properties follow necessarily from this design.</p>
+          <p class="mb-2">
+            <em class="font-serif text-silver-300 not-italic">Universality:</em>
+            &ensp;The grammar does not assume an industry, a technology, or an era.
+            A trading house in 1850 and a network of autonomous agents in 2050
+            are both fully describable within the same four primitives —
+            at different resolutions, but without loss of coherence.
+          </p>
+          <p class="mb-2">
+            <em class="font-serif text-silver-300 not-italic">Generative:</em>
+            &ensp;OBP is a grammar, not a list. It defines a set of primitives from which
+            any valid description of business activity can be derived.
+            The namespace does not enumerate concepts; it generates them.<sup><a href="#ref-8" id="cite-8" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[8]</a></sup>
+          </p>
+          <p>
+            <em class="font-serif text-silver-300 not-italic">Implementation independence:</em>
+            &ensp;An OBP-conformant description is portable. It does not encode the assumptions of any
+            particular technical platform. A reference implementation exists as proof of feasibility;
+            it is not a constraint on conformance.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            Authorship: The Configure Principle
+          </h3>
+          <p class="mb-5">
+            One of the four bases — being — possesses a distinctive capacity that the others do not:
+            it can configure itself and its environment.
+          </p>
+          <p class="mb-5">
+            In the vocabulary of OBP, this capacity is formalized as
+            <em class="font-serif text-silver-400 not-italic">being.configure</em>.
+            It denotes the ability of any being to construct, modify, or extend the systems
+            through which it operates. A business that can configure its own operational infrastructure —
+            its workflows, its data structures, its agent capabilities — is not merely executing
+            a fixed program. It is, in a meaningful sense, writing its own code.
+          </p>
+          <p class="mb-5">
+            This principle has significant implications for the design of business systems.
+            A system that can only be configured by external specialists is dependent.
+            A system that configures itself in response to its own operational experience is adaptive.
+            A system in which the beings that use it can extend and modify its capabilities is,
+            in the deepest sense, alive.
+          </p>
+          <p class="mb-5">
+            The configure principle is not a technical feature. It is a philosophical commitment:
+            that the appropriate relationship between a being and the systems it inhabits is one
+            of authorship, not mere consumption. Business systems should be written by the businesses
+            that use them, in a language sufficiently powerful to express their full operational reality.
+          </p>
+          <p>
+            Without configure, business systems remain things that are configured by others.
+            The configure principle inverts this: the system is the expression of the being's intent,
+            not a constraint imposed upon it.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            Sovereignty as a First Principle
+          </h3>
+          <p class="mb-5">
+            OBP establishes data sovereignty as a structural invariant, not an optional feature.
+          </p>
+          <p class="mb-5">
+            In the language of OBP, the principal — the entity that owns and governs a given domain —
+            is always defined. Every record, every process, every agent action can be traced to a principal
+            who bears ultimate responsibility for it. This is not merely a matter of compliance
+            or accountability, though it entails both. It is a claim about the nature of legitimate
+            authority in any system that affects human lives.
+          </p>
+          <p class="mb-5">
+            The concept of portability follows from sovereignty. If a being owns its data —
+            its records, its operational history, its accumulated knowledge — then that ownership
+            must be portable. The data must be expressible in a form that is not dependent on any
+            particular platform. A business that cannot move its own operational knowledge from one
+            system to another is not, in any meaningful sense, the owner of that knowledge.
+          </p>
+          <p class="mb-5">
+            OBP's commitment to portability is not anti-competitive. It is constitutive of competition
+            itself. Markets function when participants can freely choose among alternatives.
+            A business trapped in a platform it cannot leave has no meaningful choice.
+            OBP provides the grammatical foundation for a world in which exit is always possible.
+          </p>
+          <p>
+            Every entity that operates within an OBP-conformant system has a defined owner,
+            a defined domain of authority, and a defined set of rights to its own operational data.
+            These rights are not granted by the platform; they are guaranteed by the protocol.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            The Fluctuation: Human in the Protocol
+          </h3>
+          <p class="mb-5">
+            OBP makes a specific claim about the status of human beings within business systems
+            that distinguishes it from most operational frameworks.
+          </p>
+          <p class="mb-5">
+            A human is not simply a user of a business system. Neither are they simply a resource
+            to be allocated. In OBP, a human occupies two positions simultaneously.
+          </p>
+          <p class="mb-5">
+            As a <em class="font-serif text-silver-400 not-italic">principal</em>,
+            the human is the ultimate sovereign. The human authorizes agents, owns data,
+            and bears ultimate responsibility for the operations conducted under their authority.
+            No agent action is legitimate without traceable authorization from a principal.
+          </p>
+          <p class="mb-5">
+            As a <em class="font-serif text-silver-400 not-italic">being</em>,
+            the human participates in workflows, produces resources, and acts within contexts
+            like any other operational entity. At this level, a human is structurally
+            indistinguishable from an AI agent: both receive tasks, both produce outputs,
+            both operate within the protocol's grammar.
+          </p>
+          <p class="mb-5">
+            This dual citizenship is not a contradiction. It reflects the genuine complexity
+            of human agency in organizational contexts. We are simultaneously authors of our systems
+            and actors within them, simultaneously governors and governed.<sup><a href="#ref-9" id="cite-9" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[9]</a></sup>
+          </p>
+          <p class="mb-5">
+            The protocol acknowledges this complexity without resolving it.
+            OBP does not prescribe the correct balance between human authority and agent autonomy.
+            It provides the structural conditions under which that balance can be negotiated,
+            adjusted, and renegotiated over time.
+          </p>
+          <p>
+            The tension between individual sovereignty and systemic order is not a problem to be solved.
+            It is the engine of organizational life.
+            A system that eliminates this tension — that fully automates the human role
+            or that refuses all automation — has misunderstood the function of the protocol.
+            OBP exists to maintain the space in which human beings can be genuinely human:
+            unpredictable, creative, sovereign.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            AI Governance and the Protocol's Vocabulary
+          </h3>
+          <p class="mb-5">
+            OBP does not participate directly in policy debates.
+            It is an engineering specification, not a position paper.
+            But its design intersects structurally with concepts that recur across
+            the academic and regulatory discourse on AI governance.
+            The following correspondences are maintained as an index for researchers
+            and policymakers who encounter OBP from that direction.
+          </p>
+
+          <!-- Governance correspondence table -->
+          <div class="overflow-x-auto mb-8">
+            <table class="w-full text-sm font-sans font-light text-silver-500">
+              <thead>
+                <tr class="border-b border-silver-600/15">
+                  <th class="text-left py-3 pr-6 text-silver-400 font-normal text-xs tracking-wide">OBP Primitive</th>
+                  <th class="text-left py-3 pr-6 text-silver-400 font-normal text-xs tracking-wide">Governance Concept</th>
+                  <th class="text-left py-3 text-silver-400 font-normal text-xs tracking-wide">Structural Role</th>
+                </tr>
+              </thead>
+              <tbody class="leading-[1.85]">
+                <tr class="border-b border-silver-600/8">
+                  <td class="py-3 pr-6"><em class="font-serif text-silver-400 not-italic">being</em>&ensp;/&ensp;Owner Sovereignty</td>
+                  <td class="py-3 pr-6">Sovereignty</td>
+                  <td class="py-3">Structurally defines whose will an AI action is attributable to</td>
+                </tr>
+                <tr class="border-b border-silver-600/8">
+                  <td class="py-3 pr-6"><em class="font-serif text-silver-400 not-italic">flow.delegate</em></td>
+                  <td class="py-3 pr-6">Non-Delegation Principle</td>
+                  <td class="py-3">Makes explicit and records the scope of authority delegated to agents</td>
+                </tr>
+                <tr class="border-b border-silver-600/8">
+                  <td class="py-3 pr-6">Agent Autonomy Gate</td>
+                  <td class="py-3 pr-6">Contestability</td>
+                  <td class="py-3">Structural guarantee that a human can intervene when risk thresholds are exceeded</td>
+                </tr>
+                <tr class="border-b border-silver-600/8">
+                  <td class="py-3 pr-6">Trust Track Record</td>
+                  <td class="py-3 pr-6">Auditability</td>
+                  <td class="py-3">Immutable record of all agent actions, available for inspection</td>
+                </tr>
+                <tr class="border-b border-silver-600/8">
+                  <td class="py-3 pr-6"><em class="font-serif text-silver-400 not-italic">context.guardian</em></td>
+                  <td class="py-3 pr-6">Accountability</td>
+                  <td class="py-3">Explicit designation of the governance principal responsible for a domain</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-6">World Filter</td>
+                  <td class="py-3 pr-6">Jurisdictional Boundary</td>
+                  <td class="py-3">Defines the scope — organizational, national, platform — within which OBP operates</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mb-5">
+            OBP does not adopt a national or political stance. It functions as a neutral, open protocol.
+            Its scope is the organizational layer: the grammar through which an entity's agents operate
+            under that entity's sovereignty. Frontier model safety, national compute sovereignty,
+            and international regulatory frameworks belong to other domains of responsibility.
+          </p>
+          <p>
+            OBP occupies the missing layer between high-level policy aspirations and low-level
+            technical implementations. It does not replace governance discourse;
+            it provides the structural vocabulary that governance discourse can refer to
+            when asking: "Is this agent acting within the authority granted to it?"<sup><a href="#ref-10" class="text-violet-400 hover:text-violet-300 transition-colors font-sans" style="text-decoration:none;font-size:0.7em;vertical-align:super;">[10]</a></sup>
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            External Protocol Compatibility
+          </h3>
+          <p class="mb-5">
+            OBP defines the semantic and governance layer of agent operations.
+            It does not define how agents connect to tools, how they communicate with one another,
+            or how data is transported over networks. These concerns belong to distinct layers,
+            and OBP's relationship to them is one of composition, not competition.
+          </p>
+
+          <p class="mb-3">
+            <em class="font-serif text-silver-300 not-italic">Layer 3 — Semantics and Governance (OBP).</em>
+            &ensp;Who delegates what to whom. Owner Sovereignty definitions.
+            The meaning of an agent's action within a business domain.
+          </p>
+          <p class="mb-3">
+            <em class="font-serif text-silver-300 not-italic">Layer 2 — Execution Infrastructure.</em>
+            &ensp;Tool connection protocols. Agent instruction formats.
+            Inter-agent communication standards. OBP does not govern this layer.
+          </p>
+          <p class="mb-8">
+            <em class="font-serif text-silver-300 not-italic">Layer 1 — Transport.</em>
+            &ensp;HTTP, WebSocket, gRPC, and their successors. OBP does not govern this layer.
+          </p>
+
+          <p class="mb-5">
+            OBP governs Layer 3 exclusively. An OBP-conformant agent invokes tools through
+            whichever Layer 2 protocol its execution environment provides.
+            OBP's delegation primitives — <em class="font-serif text-silver-400 not-italic">flow.delegate</em>,
+            principal, actor class — function as higher-order vocabulary that sits above
+            the execution layer, not within it.
+          </p>
+          <p class="mb-8">
+            Three principles govern OBP's relationship to external protocols:
+          </p>
+          <p class="mb-2">
+            <em class="font-serif text-silver-300 not-italic">Composition, not competition.</em>
+            &ensp;Layer 2 protocols are execution infrastructure that OBP-conformant systems utilize.
+            They are not rivals to OBP; they are its foundation.
+          </p>
+          <p class="mb-2">
+            <em class="font-serif text-silver-300 not-italic">Sovereignty of specification.</em>
+            &ensp;OBP maintains an independent specification at the semantic layer.
+            It is not absorbed into, nor subordinated to, any execution-layer standard.
+          </p>
+          <p class="mb-8">
+            <em class="font-serif text-silver-300 not-italic">Higher-order vocabulary.</em>
+            &ensp;OBP's primitives describe the meaning and authority of agent actions.
+            Execution-layer protocols describe the mechanics. Both are necessary; neither subsumes the other.
+          </p>
+
+          <p class="mb-5 font-serif text-silver-300 text-base not-italic">Use Boundary</p>
+          <p class="mb-2">
+            The OBP core specification is published under a permissive license.
+            Any entity may read the specification, implement conformant agents,
+            and declare conformance. Conformance testing will be formalized in a future version.
+          </p>
+          <p>
+            What is not permitted: intervention in OBP's specification governance process,
+            redistribution of modified specifications under the OBP name,
+            or claims of OBP conformance based solely on imitating a reference implementation
+            rather than implementing the protocol itself.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            The Butterfly Axiom
+          </h3>
+          <p class="mb-5">
+            OBP makes a formal claim about the causal structure of the systems it describes.
+          </p>
+          <p class="mb-5">
+            Any single atomic change — one record created, one permission modified,
+            one delegation authorized — can, given sufficient time and a system operating in a
+            nonlinear regime, produce effects of arbitrary magnitude on the state of the entire
+            domain. This is the Butterfly Axiom: not a metaphor, but a structural property
+            of the systems OBP is designed to govern.
+          </p>
+          <p class="mb-5">
+            The axiom has a precise formulation. For any initial perturbation
+            <em class="font-serif text-silver-400 not-italic">δ</em> greater than zero,
+            and any threshold <em class="font-serif text-silver-400 not-italic">ε</em> greater than zero,
+            there exists a time <em class="font-serif text-silver-400 not-italic">t*</em> at which the
+            magnitude of the system's deviation exceeds
+            <em class="font-serif text-silver-400 not-italic">ε</em>.
+            In domains exhibiting positive Lyapunov exponents — and empirical evidence from
+            biological and economic systems confirms that many do — small perturbations
+            grow exponentially.
+          </p>
+          <p class="mb-5">
+            The immediate consequence is a refinement of the observer principle.
+            No act of observation or governance is without causal impact on the system being observed.
+            A protocol that monitors agent behavior is itself an agent within the system.
+            Complete separation between governor and governed is a theoretical limit,
+            not an achievable state.
+          </p>
+          <p class="mb-5">
+            This is the OBP analogue of Heisenberg's insight: observation disturbs the system.
+            The protocol acknowledges this rather than denying it.
+          </p>
+          <p>
+            The governance implication is direct. Because every intervention — no matter how small —
+            is causally significant, the design goal of OBP governance is not zero intervention
+            but minimization and transparency of intervention.
+            Every action taken within an OBP-conformant system is recorded, attributed, and auditable.
+            The Butterfly Axiom does not counsel inaction; it demands that every action
+            be taken with full awareness that its consequences may propagate beyond
+            the horizon of immediate prediction.
+          </p>
+        </div>
+
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-5 not-italic">
+            Conclusion: Toward the Open Standard
+          </h3>
+          <p class="mb-5">
+            OBP v1.0 is a beginning. We publish this document not as a finished artifact
+            but as a stake in the ground: a claim that the problem of business complexity is,
+            at its root, a grammatical problem, and that grammatical problems admit grammatical solutions.
+          </p>
+          <p class="mb-5">
+            A reference implementation of OBP is under active development.
+            We expect to publish it when the code and the protocol are sufficiently aligned
+            that reading one illuminates the other.
+            Until then, this document stands as the authoritative statement of the protocol's principles.
+          </p>
+          <p class="mb-5">
+            The long-term ambition of OBP is to become a public good: a standard maintained by
+            a community of practitioners, implementors, and researchers, owned by no single entity,
+            controlled by no single interest.
+            We are aware that this is a large ambition and that the distance between a first publication
+            and a genuine public standard is measured in years of patient work.
+          </p>
+          <p class="mb-5">
+            We publish now because the problem is urgent.
+            The proliferation of AI agents, each operating within its own proprietary vocabulary,
+            threatens to reproduce at an accelerated pace the very fragmentation that business software
+            has suffered for decades. The window for establishing a common grammar is narrowing.
+          </p>
+          <p>
+            The protocol is open. Its development will be made public as it matures.
+            Its governance will evolve as its community grows.
+            This document, published on 2026-04-01,
+            is the first public statement of OBP. It establishes priority of conception
+            and invites scrutiny. We expect to be corrected, extended, and improved.
+            We expect the protocol to become the DNA of business — outlasting its authors.
+          </p>
+        </div>
+
+        <!-- References -->
+        <div class="border-t border-silver-600/10 pt-10">
+          <h3 class="font-serif text-silver-300 text-lg font-normal mb-6 not-italic">References</h3>
+          <ol class="space-y-3 text-silver-600 text-sm font-sans font-light leading-[1.85]" style="list-style: decimal; padding-left: 1.25em;">
+            <li id="ref-1"><a href="#cite-1" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Luhmann, N. (1995). <em class="not-italic text-silver-500">Social Systems</em>. Stanford University Press.</li>
+            <li id="ref-2"><a href="#cite-2" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Teece, D. J. (2007). Explicating dynamic capabilities: the nature and microfoundations of (sustainable) enterprise performance. <em class="not-italic text-silver-500">Strategic Management Journal</em>, 28(13), 1319–1350.</li>
+            <li id="ref-3"><a href="#cite-3" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Latour, B. (2005). <em class="not-italic text-silver-500">Reassembling the Social: An Introduction to Actor-Network-Theory</em>. Oxford University Press.</li>
+            <li id="ref-4"><a href="#cite-4" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Watson, J. D., &amp; Crick, F. H. C. (1953). Molecular structure of nucleic acids: a structure for deoxyribose nucleic acid. <em class="not-italic text-silver-500">Nature</em>, 171, 737–738. <a href="https://doi.org/10.1038/171737a0" target="_blank" rel="noopener" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="font-size:0.9em;">doi:10.1038/171737a0</a></li>
+            <li id="ref-5"><a href="#cite-5" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Monod, J. (1971). <em class="not-italic text-silver-500">Chance and Necessity: An Essay on the Natural Philosophy of Modern Biology</em>. Knopf.</li>
+            <li id="ref-6"><a href="#cite-6" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Pacioli, L. (1494). <em class="not-italic text-silver-500">Summa de arithmetica, geometria, proportioni et proportionalità</em>. Venice.</li>
+            <li id="ref-7"><a href="#cite-7" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Taylor, F. W. (1911). <em class="not-italic text-silver-500">The Principles of Scientific Management</em>. Harper &amp; Brothers.</li>
+            <li id="ref-8"><a href="#cite-8" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Chomsky, N. (1957). <em class="not-italic text-silver-500">Syntactic Structures</em>. Mouton. — The argument that a finite grammar can generate an infinite set of valid expressions is the direct antecedent of OBP's generative design.</li>
+            <li id="ref-9"><a href="#cite-9" class="text-violet-500/60 hover:text-violet-400 transition-colors" style="text-decoration:none;" title="back to text">↑</a>&ensp;Arendt, H. (1958). <em class="not-italic text-silver-500">The Human Condition</em>. University of Chicago Press. — The distinction between labor, work, and action — and the dual position of the human as both author of systems and actor within them — informs OBP's treatment of the principal/being duality.</li>
+            <li id="ref-10">Ashby, W. R. (1956). <em class="not-italic text-silver-500">An Introduction to Cybernetics</em>. Chapman &amp; Hall. — The Law of Requisite Variety: a regulatory system must possess at least as much variety as the system it governs. OBP's four bases are proposed as the minimal variety sufficient to describe any business system.</li>
+          </ol>
+        </div>
+
+        <!-- Download PDF + Repository links -->
+        <div class="border-t border-silver-600/10 pt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <a
+            href="https://github.com/openbusinessprotocol/obp-theory/raw/main/whitepaper/OBP-Theory.pdf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-silver-300 text-xs font-sans hover:text-silver-100 transition-colors duration-300"
+            style="text-decoration: none; letter-spacing: 0.04em;"
+          >
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"/>
+            </svg>
+            Download Whitepaper PDF
+          </a>
+          <a
+            href="https://github.com/openbusinessprotocol/obp-theory"
+            target="_blank"
+            rel="noopener"
+            class="text-silver-600 text-xs font-sans hover:text-silver-400 transition-colors duration-300"
+            style="text-decoration: none; letter-spacing: 0.04em;"
+          >
+            Theory repository ↗
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── transparent gap — helix visible ─────────────────────── -->
+  <div style="height: 28rem;" aria-hidden="true"></div>
+
+  <!-- ─── [5] FOOTER ───────────────────────────────────────────── -->
+  <footer class="py-20 px-6" style="border-top: 1px solid rgba(96,96,112,0.15); position: relative; z-index: 1; background-color: rgba(8,8,16,0.50);">
+    <div class="max-w-2xl mx-auto">
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+        <div>
+          <!-- Double helix mark -->
+          <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-5 opacity-70">
+            <path d="M21 2 C21 10 7 10 7 18 C7 26 21 26 21 34"
+                  stroke="#9494E8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M7 2 C7 10 21 10 21 18 C21 26 7 26 7 34"
+                  stroke="#6868C0" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <line x1="7" y1="2"  x2="21" y2="2"  stroke="#5858A8" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="7" y1="18" x2="21" y2="18" stroke="#5858A8" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="7" y1="34" x2="21" y2="34" stroke="#5858A8" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <p class="font-serif text-silver-300 text-base font-normal mb-3">
+            Open Business Protocol
+          </p>
+          <p class="text-silver-600 text-xs font-sans leading-[1.9]">
+            An open protocol for the age of agents.<br />
+            First Published: 2026-04-01
+          </p>
+        </div>
+        <div>
+          <a
+            href="https://github.com/openbusinessprotocol"
+            target="_blank"
+            rel="noopener"
+            class="text-silver-600 text-xs font-sans hover:text-silver-400 transition-colors duration-300 inline-flex items-center gap-2"
+            style="white-space: nowrap;"
+          >
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            github.com/openbusinessprotocol
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-silver-600/10">
+        <p class="text-silver-600 text-xs font-sans" style="letter-spacing: 0.01em;">
+          &copy; 2026 Open Business Protocol. The protocol is maintained by its contributors.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Back to Top ──────────────────────────────────────────── -->
+  <button
+    id="back-to-top"
+    aria-label="Back to top"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-8 right-8 pointer-events-none"
+    style="z-index: 50; opacity: 0; transition: opacity 0.4s ease; background: rgba(8,8,16,0.7); border: 1px solid rgba(96,96,128,0.25); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(8px);"
+  >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 11 L7 3 M3 7 L7 3 L11 7" stroke="#8888A8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script>
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight * 0.5) {
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'auto';
+      } else {
+        btn.style.opacity = '0';
+        btn.style.pointerEvents = 'none';
+      }
+    }, { passive: true });
+  </script>
+
+</Layout>
